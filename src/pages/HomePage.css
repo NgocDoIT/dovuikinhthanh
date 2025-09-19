@@ -1,0 +1,98 @@
+/* General Body Style */
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Main container for the home page */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-sizing: border-box; /* Ensures padding is included in the element's total height and width */
+}
+
+/* The main card holding all the content */
+.home-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 32px;
+    border-radius: 24px !important; /* Overriding MUI default */
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+    text-align: center;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.profile-avatar {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 16px;
+    border: 4px solid #764ba2;
+    box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.25);
+}
+
+/* Game Title */
+.game-title {
+    font-family: 'Lora', serif !important;
+    font-weight: 700 !important;
+    font-size: 3.5rem !important;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px !important;
+}
+
+/* Game Subtitle */
+.game-subtitle {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 32px !important;
+}
+
+/* Main action button group */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* The primary 'Play Now!' button */
+.play-button {
+    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%) !important;
+    border-radius: 50px !important;
+    border: 0 !important;
+    color: white !important;
+    height: 52px !important;
+    padding: 0 32px !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3) !important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+
+.play-button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 10px 4px rgba(255, 105, 135, .4) !important;
+}
+
+/* Secondary action buttons (Leaderboard, Profile) */
+.secondary-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}

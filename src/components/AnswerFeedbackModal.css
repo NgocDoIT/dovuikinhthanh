@@ -1,0 +1,74 @@
+/* src/components/AnswerFeedbackModal.css */
+
+.feedback-modal-content {
+    animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .feedback-icon {
+    font-size: 80px !important;
+    margin-bottom: 16px;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+  
+  .feedback-icon.correct {
+    color: #4caf50; /* success.main */
+    animation-name: bounceIn;
+  }
+  
+  .feedback-icon.incorrect {
+    color: #f44336; /* error.main */
+    animation-name: shakeX;
+  }
+  
+  /* Keyframe animations */
+  @keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    20% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+    80% {
+      transform: scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes shakeX {
+    from, to {
+      transform: translate3d(0, 0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+  

@@ -1,0 +1,47 @@
+/* src/pages/GamePage.css */
+
+@keyframes score-glow {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00bfff, 0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff;
+    }
+    to {
+      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  
+  .score-glow-box {
+    background-color: #1a1a1a;
+    padding: 10px 25px;
+    border-radius: 12px;
+    animation: score-glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulse-bg {
+    0% { background-color: inherit; }
+    50% { background-color: rgba(255, 255, 255, 0.1); }
+    100% { background-color: inherit; }
+  }
+
+  .question-card {
+    width: 100%;
+    padding: 32px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  @keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  
